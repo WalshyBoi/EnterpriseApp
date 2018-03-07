@@ -1,0 +1,25 @@
+<div *ngIf="stock" class="details"><!-- if the selected stock is not null <div> is show -->
+  <h3>Stock Selected: {{stock.company}}. Details:</h3>
+  <table style="width: 100%">
+    <tr>
+      <td>name: </td>
+      <td><input [(ngModel)] = "stock.company" placeholder="name"></td>
+
+    </tr>
+    <td>price: </td>
+    <td><input [(ngModel)] = "stock.price" placeholder="price"></td>
+    <tr>
+
+
+
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+</div>

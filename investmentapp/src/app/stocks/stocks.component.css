@@ -1,0 +1,32 @@
+.parent{
+  display:flex;
+}
+.selected{
+  background: mediumaquamarine ;
+  color: white;
+
+}
+.stocks{
+  background: aqua;
+  padding: 0.5em 1em 0.5em 1.5em;
+  margin: 2em;
+  max-width: 40em;
+}
+.table {
+  width: 100%;
+}
+
+.th, .td {
+  padding: 15px;
+  text-align: center;
+}
+
+.stocks .stockListItem {
+  font-size: 0.875em;
+  font-family: Georgia, Serif;
+  background: #cce5ff;
+  padding: 0.3em;
+  margin: 0.2em;
+  text-align: left;
+}
+

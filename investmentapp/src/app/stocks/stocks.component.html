@@ -1,2 +1,35 @@
 <h1>Stock Details</h1>
-<div><span> Company Name: </span> {{stock.company | uppercase}}</div>
+<div class = "parent">
+<ol class="stocks">
+  <li class="stockListItem"
+      *ngFor="let eachStock of stocks"
+      [class.selected] = "eachStock === selectedStock"
+      (click)="onSelect(eachStock)"
+  >
+    <table style = "width:100%">
+    <tr>
+
+      <th>Name</th>
+      <th>Symbol</th>
+      <th>Location</th>
+      <th>Date of Purchase</th>
+      <th>Quantity</th>
+      <th>Cost</th>
+    </tr>
+    <tr>
+      <td>{{eachStock.company}} </td>
+      <td>{{eachStock.symbol}}</td>
+      <td>{{eachStock.location}}</td>
+      <td>{{eachStock.date_in}}</td>
+      <td>{{eachStock.qty}}</td>
+      <td>{{eachStock.cost}}</td>
+
+
+    </tr>
+    </table>
+  </li>
+
+</ol>
+<app-stock-detail [stock]="selectedStock"></app-stock-detail>
+
+</div>
