@@ -2,7 +2,7 @@
   "name": "investmentapp",
   "version": "0.0.0",
   "license": "MIT",
-  "server": "webpack-dashboard -- webpack-dev-server --inline --port 4040",
+  "server": "webpack-dashboard -- webpack-dev-server --inline --port 8000",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
