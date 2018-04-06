@@ -2,7 +2,7 @@ import { Stock } from '../models/stock';
 
 export let fakeStocks: Stock[] = [
   {
-    company: 'AIB',
+    company: 'AIB GROUP',
     location: 'ise',
     symbol: 'AIBG_I',
     date_in: "01/01/2012",
