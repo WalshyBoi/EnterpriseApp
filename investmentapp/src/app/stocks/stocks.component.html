@@ -3,30 +3,46 @@
 <ol class="stocks">
   <li class="stockListItem"
       *ngFor="let eachStock of stocks"
+
       [class.selected] = "eachStock === selectedStock"
       (click)="onSelect(eachStock)"
   >
-    <table style = "width:100%">
-    <tr>
 
-      <th>Name</th>
-      <th>Symbol</th>
-      <th>Location</th>
-      <th>Date of Purchase</th>
-      <th>Quantity</th>
-      <th>Cost</th>
+
+    <table style = "width:100%">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Symbol</th>
+        <th>Location</th>
+        <th>Date of Purchase</th>
+        <th>Quantity</th>
+        <th>Cost</th>
+        <th>Purchase Price</th>
+        <th>Change</th>
+        <th>Percentage Change</th>
+        <th>Price</th>
+        <th>Value</th>
+        <th>Detail Gain/Loss</th>
     </tr>
-    <tr>
+    </thead>
+
       <td>{{eachStock.company}} </td>
       <td>{{eachStock.symbol}}</td>
       <td>{{eachStock.location}}</td>
-      <td>{{eachStock.date_in}}</td>
+      <td>{{eachStock.date_in | date}}</td>
       <td>{{eachStock.qty}}</td>
-      <td>{{eachStock.cost}}</td>
+      <td>{{eachStock.cost| currency: "€"}}</td>
+      <td>{{eachStock.cost/eachStock.qty| currency: "€"}}</td>
+      <td>{{eachStock.change}}</td>
+      <td>{{eachStock.pChg}}</td>
+      <td>{{eachStock.price | currency: "€"}}</td>
+      <td>{{eachStock.value | currency: "€"}}</td>
 
+      <span ng-class ="{'color-red': eachStock.sumgl < 0}">{{eachStock.sumgl| currency: "€"}}</span>
 
-    </tr>
     </table>
+
   </li>
 
 </ol>

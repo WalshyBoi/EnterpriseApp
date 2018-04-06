@@ -2,31 +2,37 @@
   display:flex;
 }
 .selected{
-  background: mediumaquamarine ;
-  color: white;
+  background: lightgoldenrodyellow ;
+  color: black;
 
 }
 .stocks{
-  background: aqua;
-  padding: 0.5em 1em 0.5em 1.5em;
-  margin: 2em;
-  max-width: 40em;
+  background: lightgoldenrodyellow;
+
+
 }
 .table {
   width: 100%;
+  border: 1px solid black;
+
 }
 
-.th, .td {
-  padding: 15px;
+.color-red{
+  color: red;
+}
+.th, .td{
+  padding: 100px;
+  margin-left: 10px;
   text-align: center;
+  border: 1px solid black;
 }
 
 .stocks .stockListItem {
   font-size: 0.875em;
   font-family: Georgia, Serif;
   background: #cce5ff;
-  padding: 0.3em;
-  margin: 0.2em;
-  text-align: left;
+  padding: 0.60em;
+  margin: 0.10em;
+  text-align: center;
 }
 
